@@ -25,8 +25,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List<CustomUv> UngVien = [
-    CustomUv(avatar: 'assets/images/av1.png', name: 'Nguyễn Kiều Cần Thơ', type: 'Đại Lý', major: 'Tư vấn tài chính', date: '01/01/2024'),
-    CustomUv(avatar: 'assets/images/av1.png', name: 'Nguyễn Mạnh Hùng', type: 'Đại Lý', major: 'Tư vấn tài chính', date: '01/01/2024'),
+    CustomUv(avatar: 'assets/images/av1.png', name: 'Nguyễn Kiều Cần Thơ     010100101', type: 'Đại Lý', major: 'Tư vấn tài chính', date: '01/01/2024'),
+    CustomUv(avatar: 'assets/images/av1.png', name: 'Nguyễn Mạnh Hùng longavtladadad', type: 'Đại Lý', major: 'Tư vấn tài chính', date: '01/01/2024'),
     CustomUv(avatar: 'assets/images/av1.png', name: 'Nguyễn Hoàng Duy', type: 'Đại Lý', major: 'Tư vấn tài chính', date: '01/01/2024'),
     CustomUv(avatar: 'assets/images/av1.png', name: 'Nguyễn Mạnh Khiêm', type: 'Đại Lý', major: 'Tư vấn tài chính', date: '01/01/2024'),
     CustomUv(avatar: 'assets/images/av1.png', name: 'Phạm Ngọc Quỳnh Anh', type: 'Đại Lý', major: 'Tư vấn tài chính', date: '01/01/2024'),
@@ -65,6 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       Text(
                         UngVien[index].name,
+                        maxLines: 2,
                         style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       ),
@@ -148,7 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             CustomKh(
                 avatar: 'assets/images/img1.png',
-              course: 'Khóa học dành cho đại lý cấp cao',
+              course: 'Khóa học dành cho đại lý cấp cao    sdsadada',
               code: 'C32489573',
               date: '01/01/2023 - 31/12/2013',
               member: '5 ứng viên'),

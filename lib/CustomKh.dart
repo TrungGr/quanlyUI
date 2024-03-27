@@ -43,46 +43,53 @@ class CustomKh extends StatelessWidget {
             // Container(
             //   width: 250,
             //   child:
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: 250, // Đặt giới hạn chiều rộng cho Text
+                  child: Text(
                     course,
+                    maxLines: 2,
                     style: TextStyle(
-                        fontSize: 18, fontWeight: FontWeight.bold),
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
                     overflow: TextOverflow.ellipsis,
                     softWrap: true,
                   ),
-                  Row(
-                    children: [
-                      Icon(Icons.local_atm),
-                      SizedBox(width: 10),
-                      Text(code),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Icon(Icons.calendar_month),
-                      SizedBox(width: 10),
-                      Text(date),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.people_alt_sharp,
-                        color: Colors.deepPurple,
-                      ),
-                      SizedBox(width: 10),
-                      Text(
-                        member,
-                        style: TextStyle(color: Colors.deepPurple),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+                ),
+                Row(
+                  children: [
+                    Icon(Icons.local_atm),
+                    SizedBox(width: 10),
+                    Text(code),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Icon(Icons.calendar_month),
+                    SizedBox(width: 10),
+                    Text(date),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Icon(
+                      Icons.people_alt_sharp,
+                      color: Colors.deepPurple,
+                    ),
+                    SizedBox(width: 10),
+                    Text(
+                      member,
+                      style: TextStyle(color: Colors.deepPurple),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+
             // ),
           ],
         ),
@@ -92,15 +99,16 @@ class CustomKh extends StatelessWidget {
   Widget buttonSheetContent(BuildContext context) {
     return Container(
       width: double.infinity,
+      height: 600,
       color: Colors.white,
       child: Column(
         children: [
           Container(height: 100,),
-          SingleChildScrollView(
-            child: Container(
-
+          Expanded(
+            child: SingleChildScrollView(
               child: Column(
-                mainAxisSize: MainAxisSize.max,
+                mainAxisSize: MainAxisSize.min,
+
                 children: [
                   InforUv(
                       avatar: 'assets/images/av1.png',
@@ -127,6 +135,7 @@ class CustomKh extends StatelessWidget {
                       name: 'Phạm Thu Trang',
                       infor: '00000023 / Trưởng nhóm KD - MKT'),
                   SizedBox(height: 2.5),
+                  Container(height: 900,)
                 ],
               ),
             ),
